@@ -1,0 +1,9 @@
+package com.example.sistema_financas_pessoal.repository;
+
+import com.example.sistema_financas_pessoal.entity.Categoria;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
+    List<Categoria> findByUsuarioId(Long usuarioId);
+}
